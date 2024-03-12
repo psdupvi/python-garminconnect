@@ -94,6 +94,10 @@ class Garmin:
         self.garmin_connect_menstrual_dayview_url = (
             "/periodichealth-service/menstrualcycle/dayview"
         )
+
+        self.garmin_connect_pregnancy_snapshot_url = (
+            "periodichealth-service/menstrualcycle/pregnancysnapshot"
+        )
         self.garmin_connect_goals_url = "/goal-service/goal/goals"
 
         self.garmin_connect_rhr_url = "/userstats-service/wellness/daily"
@@ -1170,6 +1174,14 @@ class Garmin:
 
         url = f"{self.garmin_connect_menstrual_calendar_url}/{startdate}/{enddate}"
         logger.debug(f"Requesting menstrual data for dates {startdate} through {enddate}")
+
+        return self.connectapi(url)
+
+    def get_pregnancy_summary(self):
+        """Return snapshot of pregnancy data"""
+
+        url = f"{self.garmin_connect_pregnancy_snapshot_url}"
+        logger.debug(f"Requesting pregnancy snapshot data")
 
         return self.connectapi(url)
 
