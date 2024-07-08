@@ -1,16 +1,17 @@
 [project]
-name = "garminconnect"
-version = "0.2.19"
-description = "Python 3 API wrapper for Garmin Connect"
+name = "python-garminconnect"
+version = "0.1.0"
+description = "test"
 authors = [
     {name = "Ron Klinkien", email = "ron@cyberjunky.nl"},
+    {name = "Pierre du Pont", email = "psdupvi@gmail.com"},
 ]
 dependencies = [
     "garth>=0.4.46",
     "withings-sync>=4.2.4",
 ]
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "1"}
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
